@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors Lizard Spock</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="title-container">
+        <button class="title" id="title">Rock Paper Scissors Lizard Spock</button>
+    </div>
+    <div class="container">
+        <div id="options">
+            <button id="cpu-btn" class="mode-btn" onclick="setMode('cpu')">Play against CPU</button>
+            <button id="user-btn" class="mode-btn" onclick="setMode('user')">Play against another user</button>
+        </div>
+        <div class="options" id="user-options">
+            <p>User 1, choose your option:</p>
+            <div class="button-group">
+                <button class="option" onclick="play('rock', 'User 1')">Rock</button>
+                <button class="option" onclick="play('paper', 'User 1')">Paper</button>
+                <button class="option" onclick="play('scissors', 'User 1')">Scissors</button>
+                <button class="option" onclick="play('lizard', 'User 1')">Lizard</button>
+                <button class="option" onclick="play('spock', 'User 1')">Spock</button>
+            </div>
+        </div>
+        <div class="options" id="user2-options" style="display: none;">
+            <p>User 2, choose your option:</p>
+            <div class="button-group">
+                <button class="option" onclick="play('rock', 'User 2')">Rock</button>
+                <button class="option" onclick="play('paper', 'User 2')">Paper</button>
+                <button class="option" onclick="play('scissors', 'User 2')">Scissors</button>
+                <button class="option" onclick="play('lizard', 'User 2')">Lizard</button>
+                <button class="option" onclick="play('spock', 'User 2')">Spock</button>
+            </div>
+        </div>
+        <div class="options" id="cpu-options">
+            <p>Choose your option:</p>
+            <div class="button-group">
+                <button class="option" onclick="play('rock', 'cpu')">Rock</button>
+                <button class="option" onclick="play('paper', 'cpu')">Paper</button>
+                <button class="option" onclick="play('scissors', 'cpu')">Scissors</button>
+                <button class="option" onclick="play('lizard', 'cpu')">Lizard</button>
+                <button class="option" onclick="play('spock', 'cpu')">Spock</button>
+            </div>
+        </div>
+        <div id="result"></div>
+        <button id="exit-btn" class="option" onclick="exitGame()">Exit Game</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
